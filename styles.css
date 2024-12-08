@@ -1,0 +1,545 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0079ff;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.user-options .login {
+    padding: 5px 10px;
+    background-color: #ff9100;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.user-options .search-bar input {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+/* Game Series Section */
+.game-series {
+    padding: 20px;
+    background-color: #005bb5;
+    text-align: center;
+}
+
+.series-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.series-item {
+    background-color: #00a2ff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.featured-game {
+    position: relative;
+    text-align: center;
+}
+
+.featured-game img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.featured-game button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff9100;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* New Releases and Favorite Games Sections */
+.new-releases, .favorite-games {
+    width: 100%;
+    max-width: 1000px;
+}
+
+h2 {
+    color: #ffeb3b;
+    text-align: center;
+}
+
+.game-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    background-color: #005bb5;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+/* Form Styling */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #005bb5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #ffeb3b;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9100;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff7300;
+}
+
+.form-container p {
+    margin-top: 15px;
+}
+
+.form-container a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------footer */
+/* Footer Styling */
+.footer {
+    background-color: #005bb5;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    color: #ffeb3b;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #004080;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #ffeb3b;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9100;
+}
+
+
+
+
+
+
+
+
+
+
+/* Chatbot Styles */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+.chatbot-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #005bb5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.chatbot-popup {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #005bb5;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.chat-content {
+    padding: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.chat-content .bot-message, .chat-content .user-message {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: left;
+}
+
+.user-message {
+    background-color: #005bb5;
+    color: #fff;
+    text-align: right;
+    margin-left: auto;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.chat-input button {
+    background-color: #005bb5;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* QR Button */
+/* .qr-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #005bb5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.qr-button img {
+    width: 30px;
+    height: 30px;
+} */
+
+/* QR Popup Styles */
+/* .qr-popup {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 280px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.qr-popup-content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.qr-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    background-color: #005bb5;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.qr-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.qr-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.qr-section {
+    text-align: center;
+}
+
+.qr-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.qr-code {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------
+ */
+
+ #gameiconimg {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+ }
+ a{
+    text-decoration: none;
+    color:#ccc;
+ }
