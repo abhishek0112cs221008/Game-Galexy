@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Signup</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="submit-btn">Sign Up</button>
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </form>
+        <div id="message" style="color: red; margin-top: 10px;"></div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js"></script>
+
+    <script>
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBucxVvvI3RdIa-fyRQLcvPhqIBXemD1E4",
+            authDomain: "game-galexy.firebaseapp.com",
+            projectId: "game-galexy",
+            storageBucket: "game-galexy.appspot.com",
+            messagingSenderId: "761461988487",
+            appId: "1:761461988487:web:5a05d542bd66ec8aa3ac22"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // reference your database
+        var contactFormDB = firebase.database().ref("Form");
+
+        // Handle form submission
+        document.getElementById("signupForm").addEventListener("submit", async function (e) {
+            e.preventDefault(); // Prevent default form submission
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+            const messageDiv = document.getElementById("message");
+
+            // Validate passwords
+            if (password !== confirmPassword) {
+                messageDiv.style.color = "red";
+                messageDiv.textContent = "Passwords do not match. Please try again.";
+                return;
+            }
+
+            try {
+                // Create user with Firebase Authentication
+                const userCredential = await firebase.auth().createUserWithEmailAndPassword(auth, email, password);
+
+                // Success message
+                messageDiv.style.color = "green";
+                messageDiv.textContent = "Signup successful! Redirecting to login page...";
+
+                // Redirect to login page
+                setTimeout(() => {
+                    window.location.href = "login.html";
+                }, 2000);
+            } catch (error) {
+                // Display Firebase error messages
+                messageDiv.style.color = "red";
+                messageDiv.textContent = error.message;
+            }
+        });
+    </script>
+</body>
+
+</html>
